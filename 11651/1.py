@@ -1,6 +1,6 @@
 """2차원 평면 위의 점 N개가 주어진다. 
-좌표를 x좌표가 증가하는 순으로, 
-x좌표가 같으면 y좌표가 증가하는 순서로 정렬한 다음
+좌표를 y좌표가 증가하는 순으로, 
+y좌표가 같으면 x좌표가 증가하는 순서로 정렬한 다음
  출력하는 프로그램을 작성하시오."""
 
 n = int(input())
@@ -18,10 +18,10 @@ class point():
     def sortpoint(self):
         for i in range(len(self.pointlist)-1):
             for j in range(i+1,len(self.pointlist)):
-                if self.pointlist[i].x==self.pointlist[j].x :
-                    if self.pointlist[i].y > self.pointlist[j].y :
+                if self.pointlist[i].y==self.pointlist[j].y :
+                    if self.pointlist[i].x > self.pointlist[j].x :
                         self.pointlist[i], self.pointlist[j] = self.pointlist[j], self.pointlist[i]
-                elif self.pointlist[i].x > self.pointlist[j].x :
+                elif self.pointlist[i].y > self.pointlist[j].y :
                     self.pointlist[i], self.pointlist[j] = self.pointlist[j], self.pointlist[i]
 
 for i in range(n):
